@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "813249518000",
-    "firebase_url": "https://clg-app-6d7cb.firebaseio.com",
-    "project_id": "clg-app-6d7cb",
-    "storage_bucket": "clg-app-6d7cb.appspot.com"
+    "project_number": "904060891118",
+    "firebase_url": "https://aec-apk.firebaseio.com",
+    "project_id": "aec-apk",
+    "storage_bucket": "aec-apk.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:813249518000:android:88e1f426a3606c17021e75",
+        "mobilesdk_app_id": "1:904060891118:android:4241e2d402d6287b5968ff",
         "android_client_info": {
           "package_name": "com.example.clgapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "813249518000-r6qj6kddaamsn4bdcbdhksjs7s6ve3ok.apps.googleusercontent.com",
+          "client_id": "904060891118-ukdtbd7adqseb08k1kquugdtiohpg4c0.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCivlM-DXZeOpW3NIKOoXErVAsyLiOVC7s"
+          "current_key": "AIzaSyAQynC7X2bK3UGqLZMq2OWTzB5mpzVvJ0c"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "813249518000-r6qj6kddaamsn4bdcbdhksjs7s6ve3ok.apps.googleusercontent.com",
+              "client_id": "904060891118-ukdtbd7adqseb08k1kquugdtiohpg4c0.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
