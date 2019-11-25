@@ -1,5 +1,6 @@
 package com.example.clgapp;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -8,6 +9,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+
+import java.util.Objects;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +27,11 @@ public class LogedIN extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loged_in);
+
+        //Objects.requireNonNull(getSupportActionBar()).setHomeButtonEnabled(true);
+        //Objects.requireNonNull(this.getSupportActionBar()).setTitle("Marks");
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -87,9 +95,11 @@ public class LogedIN extends AppCompatActivity
         if (id == R.id.marks) {
             // Handle the marks fragment
             selectedFrag = new BlankFragment();
+            //getSupportActionBar().setTitle("Marks");
 
         } else if (id == R.id.attendence) {
             selectedFrag = new Attendence_Fragment();
+            //getSupportActionBar().setTitle("Attendence");
 
         } else if (id == R.id.logout) {
             FirebaseAuth.getInstance().signOut();

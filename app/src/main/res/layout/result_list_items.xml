@@ -20,6 +20,9 @@
             android:text="Maths"
             android:textSize="25sp"
             android:layout_marginTop="18dp"
+            android:textColor="@color/colorAccent"
+            android:typeface="monospace"
+            android:textStyle="bold"
             >
         </TextView>
 
@@ -29,6 +32,7 @@
             android:orientation="vertical"
             android:layout_marginLeft="25dp">
         <TextView
+
             android:id="@+id/secured"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,6 +41,8 @@
             android:textSize="25sp"
             />
             <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="italic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/secures"
@@ -59,6 +65,8 @@
                 android:layout_marginLeft="25dp"
                 />
             <TextView
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="italic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/total"

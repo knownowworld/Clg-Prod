@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,19 +31,26 @@ public class MainActivity extends AppCompatActivity {
     String emailStr,passStr;
     FirebaseDatabase database;
     DatabaseReference myRef;
-
+    ProgressBar progress;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
+
         setContentView(R.layout.activity_main);
 
         email = (AppCompatEditText)findViewById(R.id.email);
         pass = (AppCompatEditText)findViewById(R.id.pass);
         siginIn = findViewById(R.id.signIn);
         signUp = findViewById(R.id.signUp);
-
+        progress = findViewById(R.id.progressBar);
 
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
@@ -59,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
             signUp.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    progress.setVisibility(View.VISIBLE);
                     emailStr = (email.getText()).toString().trim();
                     passStr = (pass.getText()).toString().trim();
 
@@ -66,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
                     mAuth.createUserWithEmailAndPassword(emailStr, passStr).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
+
+
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
                                 myRef.child(mAuth.getUid()).setValue("null");
@@ -102,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
             siginIn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    progress.setVisibility(View.VISIBLE);
                     emailStr = (email.getText()).toString().trim();
                     passStr = (pass.getText()).toString().trim();
 
@@ -110,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
                             .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
+
                                     if (task.isSuccessful()) {
                                         // Sign in success, update UI with the signed-in user's information
                                         startActivity(logedIn);
