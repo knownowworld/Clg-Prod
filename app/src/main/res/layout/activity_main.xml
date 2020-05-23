@@ -25,6 +25,7 @@
         android:layout_marginTop="25dp"
         />
 
+
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/email"
         android:maxLines="1"
