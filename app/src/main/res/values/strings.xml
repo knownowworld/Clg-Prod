@@ -21,4 +21,9 @@
     <string name="_98">98</string>
     <string name="_100">100</string>
     <string name="maths">Maths</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="coordinates">Coordinates</string>
+    <string name="calender">Calender</string>
+    <string name="attendence">Attendence</string>
+    <string name="marks">Marks</string>
 </resources>
