@@ -10,6 +10,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
 
     }
     buildTypes {
@@ -44,7 +45,14 @@ dependencies {
     implementation 'com.google.firebase:firebase-database:19.2.0'
 
     implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation 'com.firebaseui:firebase-ui:6.2.1'
+
+    implementation 'com.github.hani-momanii:SuperNova-Emoji:1.0'
+    implementation 'com.github.lguipeng:BubbleView:1.0.1'
+    implementation 'com.google.android.material:material:1.1.0'
     //implementation 'com.google.android.gms:play-services:12.0.1'
+
+    implementation 'com.android.support:multidex:1.0.3'
 
 
 }

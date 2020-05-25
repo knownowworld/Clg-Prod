@@ -107,6 +107,9 @@ public class LogedIN extends AppCompatActivity
             selectedFrag = new Calender();
         } else if (id == R.id.map) {
             startActivity(new Intent(this, MapsActivity.class));
+        } else if (id == R.id.forum) {
+            //Calender Fragment
+            selectedFrag = new ChatFragment();
         }
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_display,selectedFrag).commit();
 
